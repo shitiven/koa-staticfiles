@@ -19,9 +19,12 @@ module.exports = function(rootDir, opts) {
     assert(rootDir, 'rootDir is required to serve files');
     assert.strictEqual(typeof rootDir, "string", "rootDir must be specified")
 
+    if (opts.prefix) {
+        assert.equal(opts.prefix.charAt(0), "/", "prefix must start with '/'")
+    }
+
     opts.root = path.resolve(rootDir);
     opts.index = opts.index || "index.html";    
-
 
     return function serve(ctx, next) {
 
@@ -30,13 +33,11 @@ module.exports = function(rootDir, opts) {
             if (ctx.method != 'HEAD' && ctx.method != 'GET') return;
             if (ctx.body != null || ctx.status != 404) return;
 
+
             if (!opts.prefix) {
                 return send(ctx, ctx.path, opts);
             } 
 
-            if (ctx.path.indexOf(opts.prefix) != 0) {
-                return;
-            }
 
             /* Serve folders as specified
              eg. :
