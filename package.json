@@ -1,43 +1,40 @@
 {
-    "name": "koa-staticfiles",
-        "version": "1.0.0",
-        "description": "Static file serving middleware for koa 2.x with directory, rewrite and index support Edit",
-        "main": "index.js",
-        "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/EasingLab/koa-staticfiles.git"
-    },
-    "keywords": [
-        "directory",
-        "file",
-        "folder",
-        "koa",
-        "middleware",
-        "sendfile",
-        "server",
-        "static"
-    ],
-    "author": "david.shi@easing.io",
-    "license": "MIT",
-    "dependencies": {
-        "koa-send": "~3.2.0"
-    },
-    "devDependencies": {
-        "istanbul": "0",
-        "koa": "2",
-        "mocha": "2",
-        "supertest": "1"
-    },
-    "bugs": {
-        "url": "https://github.com/EasingLab/koa-staticfiles/issues"
-    },
-    "homepage": "https://github.com/EasingLab/koa-staticfiles#readme",
-    "scripts": {
-        "test": "mocha --harmony --reporter spec",
-        "test-cov": "node --harmony ./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha",
-        "test-travis": "node --harmony ./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha --report lcovonly"
-    }
+  "name": "koa-staticfiles",
+  "version": "1.0.1",
+  "description": "Static file serving middleware for koa 2.x with directory, rewrite and index support Edit",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --harmony --reporter spec",
+    "test-cov": "node --harmony ./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha",
+    "test-travis": "node --harmony ./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha --report lcovonly"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EasingLab/koa-staticfiles.git"
+  },
+  "keywords": [
+    "directory",
+    "file",
+    "folder",
+    "koa",
+    "middleware",
+    "sendfile",
+    "server",
+    "static"
+  ],
+  "author": "david.shi@easing.io",
+  "license": "MIT",
+  "dependencies": {
+    "koa-send": "~3.2.0"
+  },
+  "devDependencies": {
+    "istanbul": "0",
+    "koa": "2",
+    "mocha": "2",
+    "supertest": "1"
+  },
+  "bugs": {
+    "url": "https://github.com/EasingLab/koa-staticfiles/issues"
+  },
+  "homepage": "https://github.com/EasingLab/koa-staticfiles#readme"
 }
