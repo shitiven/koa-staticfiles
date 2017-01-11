@@ -33,11 +33,9 @@ module.exports = function(rootDir, opts) {
             if (ctx.method != 'HEAD' && ctx.method != 'GET') return;
             if (ctx.body != null || ctx.status != 404) return;
 
-
             if (!opts.prefix) {
                 return send(ctx, ctx.path, opts);
             } 
-
 
             /* Serve folders as specified
              eg. :
@@ -54,9 +52,7 @@ module.exports = function(rootDir, opts) {
             }
 
             let prefixRegx = new RegExp("^" + opts.prefix);
-            if (opts.prefix) {
-                ctx.path = path.normalize(ctx.path.replace(prefixRegx, "/"));
-            }
+            ctx.path = path.normalize(ctx.path.replace(prefixRegx, "/"));
             return send(ctx, ctx.path, opts);
 
         })
