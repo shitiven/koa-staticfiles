@@ -2,7 +2,6 @@
 
 [![Build Status](https://travis-ci.org/EasingLab/koa-staticfiles.svg?branch=master)](https://travis-ci.org/EasingLab/koa-staticfiles)
 [![Coverage Status](https://coveralls.io/repos/github/koajs/static/badge.svg?branch=master)](https://coveralls.io/github/koajs/static?branch=master)
-[![License][license-image]][license-url]
 
 Static file serving middleware for koa 2.x with directory, rewrite and index support
 
