@@ -24,7 +24,7 @@ app.use(require('koa-staticfiles')(rootDir, opts));
 
 ### Options
 
-- `prefx` rewrite path
+ - `prefix` rewrite path
  - `maxage` Browser cache max-age in milliseconds. defaults to 0
  - `hidden` Allow transfer of hidden files. defaults to false
  - `index` Default file name, defaults to 'index.html'
@@ -33,7 +33,7 @@ app.use(require('koa-staticfiles')(rootDir, opts));
 ## Example
 
 ```js
-var serve = require('koa-static');
+var serve = require('koa-staticfiles');
 var koa = require('koa');
 var app = koa();
 
